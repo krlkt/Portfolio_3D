@@ -47,7 +47,7 @@ scene.add(pointLight, ambientLight);
 
 //Adding lots of stars into the galaxy
 function addStar() {
-  const geometry = new SphereGeometry(0.25, 24, 24);
+  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
 
