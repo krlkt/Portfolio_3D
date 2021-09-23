@@ -83,8 +83,11 @@ const moon = new THREE.Mesh(
 );
 scene.add(moon, me);
 
+// moon.position.setX(-10);
+// moon.position.setZ(35);
+
 moon.position.setX(-10);
-moon.position.setZ(35);
+moon.position.setZ(40);
 
 //Background
 const spaceTexture = new THREE.TextureLoader().load('bg.jpeg');
