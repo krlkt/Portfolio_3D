@@ -184,7 +184,7 @@ blockquote p {
 /* projects */
 .tilesWrap {
 	padding: 0;
-	margin: 15px 10px;
+	margin: 35px 10px;
 	list-style: none;
 	text-align: center;
 }
@@ -192,12 +192,11 @@ blockquote p {
 .tilesWrap li {
   display: inline-block;
   width: 37%;
-  min-width: 220px;
-	max-width: 230px;
+  min-width: 210px;
   padding: 30px 20px;
   position: relative;
   vertical-align: top;
-	margin: 15px;
+	margin: 35px 15px;
   min-height: 25vh;
   background: #262a2b;
   border: 1px solid #252727;
