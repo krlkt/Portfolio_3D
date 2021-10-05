@@ -5,6 +5,9 @@ html {
 }
 
 canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -59,6 +62,7 @@ header {
   padding: 1.75rem;
   margin-bottom: var(--spacing);
   margin-top: 0;
+  min-width: 400px;
 }
 
 section {
@@ -110,6 +114,7 @@ blockquote p {
   grid-row-gap: 100px;
   align-items: center;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .icon {
@@ -127,7 +132,7 @@ blockquote p {
 
 /* github redirect button */
 .glow-on-hover {
-  width: 220px;
+  width: 250px;
   height: 50px;
   border: none;
   outline: none;
@@ -135,8 +140,12 @@ blockquote p {
   background: rgb(14, 13, 13, 0.9);
   cursor: pointer;
   position: relative;
+  left: 50px;
   z-index: 0;
   border-radius: 10px;
+  font-family: elevon, sans-serif;
+  font-size: 1rem;
+  padding: 10px;
 }
 
 .glow-on-hover:before {
@@ -185,7 +194,7 @@ blockquote p {
   100% { background-position: 0 0; }
 }
 
-/* projects */
+/* projects section */
 .tilesWrap {
 	padding: 0;
 	margin: 35px 10px;
@@ -323,4 +332,35 @@ background: linear-gradient(to right, #ffc500, #c21500);
 	background: #FC354C;
 background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
 background: linear-gradient(to right, #0ABFBC, #FC354C);
+}
+
+@media (min-width: 640px) { body { font-size:0.8rem;} } 
+@media (min-width:960px) { body { font-size:1rem;} } 
+@media (min-width:1500px) { 
+  body { font-size: 1.2rem; }
+
+  header {
+    margin-top: 70px;
+  } 
+  blockquote p{
+    font-size: 3.5rem;
+  }
+  .tilesWrap li p {
+    font-size: 1.1rem;
+    line-height: normal;
+  }
+
+  .bottom500 {
+    margin-bottom: 500px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .icon {
+    width: 300px;
+    height: 300px;
+  } 
+
 }
