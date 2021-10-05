@@ -1,4 +1,5 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
+//import { OrbitControls } from '@/node_modules/three/examples/jsm/controls/OrbitControls'
 
 const scene = new THREE.Scene();
 
@@ -33,17 +34,25 @@ scene.add(torus);
 //Lighting
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(5, 5, 5);
+
 const ambientLight = new THREE.AmbientLight(0xffffff);
 
-scene.add(pointLight, ambientLight);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0,6);
+directionalLight.position.set(0, 10, 0);
+directionalLight.target.position.set(-5, 0, 0);
+
+scene.add(pointLight, ambientLight, directionalLight, directionalLight.target);
 
 // Helpers
 
-// const lightHelper = new THREE.PointLightHelper(pointLight)
+// const lightHelper = new THREE.PointLightHelper(pointLight);
 // const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper)
+// const lightHelper2 = new THREE.PointLightHelper(directionalLight);
 
-// const controls = new OrbitControls(camera, renderer.domElement);
+// scene.add(lightHelper, gridHelper, lightHelper2);
+
+
+//const controls = new OrbitControls(camera, renderer.domElement);
 
 //Adding lots of stars into the galaxy
 function addStar() {
@@ -122,7 +131,7 @@ function animate() {
   moon.rotation.x += 0.005;
   moon.rotation.z += 0.006;
 
-  // controls.update();
+  //controls.update();
 
   renderer.render(scene, camera);
 }
